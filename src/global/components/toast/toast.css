@@ -1,0 +1,42 @@
+@keyframes toast-slide-in {
+  from {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+    max-height: 120px;
+    margin-bottom: 0.5rem;
+  }
+  to {
+    transform: translateX(110%);
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 0;
+  }
+}
+
+.toast-enter {
+  animation: toast-slide-in 0.3s ease forwards;
+}
+
+.toast-exit {
+  animation: toast-slide-out 0.3s ease forwards;
+}
+
+@keyframes progress-shrink {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}

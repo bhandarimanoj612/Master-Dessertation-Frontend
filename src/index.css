@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Apply these styles to the body element */
+body {
+    /* Default light mode background */
+    background-color: #f7f7f7;
+    /* A very light gray, similar to your first image's outer background */
+    transition: background-color 0.3s ease-in-out;
+    /* Smooth transition for background */
+}
+
+/* When the html element has the 'dark' class */
+html.dark body {
+    background-color: #0d0d0d;
+    /* A very dark gray/near black, similar to your second image's outer background */
+}
+
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+/* Dark mode select dropdown styling */
+@media (prefers-color-scheme: dark) {
+  select {
+    color-scheme: dark;
+  }
+
+  select option {
+    background-color: #1a2332; /* Match your dark bg */
+    color: #ffffff;
+  }
+
+  select option:checked {
+    background: linear-gradient(#3b82f6, #3b82f6);
+    background-color: #3b82f6 !important;
+  }
+}
